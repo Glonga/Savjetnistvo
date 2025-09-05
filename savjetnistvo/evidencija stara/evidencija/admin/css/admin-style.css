@@ -1,0 +1,5 @@
+/* Osnovni stilovi za administratorske stranice Evidencija plugina *//* Osnovni stilovi za administratorske stranice Evidencija plugina */
+
+#room-occupants-list .current-user {
+    font-weight: bold;
+}

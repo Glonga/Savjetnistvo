@@ -1,0 +1,148 @@
+Plan za Izradu WordPress Plugina 'Savjetništvo'
+Ovo je detaljan plan koji se temelji na tvojoj početnoj ideji. Cilj je stvoriti robustan, jasan i automatiziran sustav za tebe i tvoje klijente.
+
+1. Struktura Podataka (Arhitektura Plugina)
+Tvoju ideju o "bazi podataka" najbolje je realizirati kroz WordPress Custom Post Types (CPT). To je ispravan način za odvajanje tvojih podataka od standardnih objava i stranica.
+
+CPT: Projekt
+
+Polja:
+
+Povezani Klijent (veza na WordPress korisnika).
+
+Naziv djela.
+
+Vrsta djela (npr. roman, zbirka priča, priručnik).
+
+Sinopsis i podaci o djelu.
+
+Datum početka i završetka.
+
+Status (npr. Aktivan, Završen, Na čekanju).
+
+Povezani Program (ovo može biti taksonomija, poput kategorije).
+
+Ukupna cijena i odobreni popust.
+
+CPT: Susret
+
+Polja:
+
+Povezani Projekt (svaki susret pripada jednom projektu).
+
+Datum i vrijeme susreta.
+
+Bilješke sa susreta (vidljive tebi, opcionalno i klijentu).
+
+Status (npr. Održan, Zakazan, Otkazan).
+
+CPT: Zadaća
+
+Polja:
+
+Povezani Susret (zadaća se veže uz susret).
+
+Opis zadaće.
+
+Rok za predaju.
+
+Status (Nije predano, Predano, Pregledano, Kasni).
+
+Prostor za upload (.docx, .pdf).
+
+Prostor za tvoj feedback (tekstualni komentar ili upload ispravljenog dokumenta).
+
+CPT: Plaćanje
+
+Polja:
+
+Povezani Projekt.
+
+Iznos.
+
+Datum izdavanja.
+
+Rok plaćanja.
+
+Status (Plaćeno, Nije plaćeno, U zakašnjenju).
+
+Ovakva struktura omogućuje ti da kasnije lako filtriraš i pretražuješ sve podatke.
+
+a) Upravljanje Klijentima (WordPress Korisnici)
+Ovo je nadogradnja na postojeći WordPress sustav korisnika:
+
+Custom User Role: Uvest ćemo novu ulogu "Klijent". To omogućuje lako filtriranje i odvajanje klijenata od administratora ili drugih korisnika.
+
+Proširenje Profila Korisnika: Na stranicu za uređivanje svakog korisnika (pod "Korisnici" u adminu) dodat ćemo nova polja za osobne podatke, vidljiva samo administratoru:
+
+Pseudonim (ovo polje može biti vidljivo i klijentu).
+
+Kontakt telefon.
+
+Adresa.
+
+OIB (za potrebe R1 računa, ako je primjenjivo).
+
+Interne bilješke o klijentu.
+
+Prikaz u Tablici Korisnika: U glavnu tablicu svih korisnika (wp-admin/users.php) dodat ćemo nove stupce radi bržeg pregleda, npr. "Pseudonim" i "Aktivni Projekt".
+
+2. Što Nedostaje, a Bilo bi Korisno?
+Tvoj plan je odličan, a ovo su samo ideje za nadogradnju koje će ti olakšati život:
+
+a) Automatizacija i Obavijesti
+Ovo je najveća prilika za uštedu vremena. Sustav može automatski slati e-mail obavijesti:
+
+Klijentu:
+
+"Dobrodošli na projekt!" s osnovnim informacijama.
+
+Podsjetnik 24h prije susreta.
+
+Obavijest o novoj zadaći i roku.
+
+Podsjetnik dan prije isteka roka za zadaću.
+
+Potvrda da je zadaća uspješno predana.
+
+Obavijest kada pregledaš zadaću i ostaviš komentar.
+
+Podsjetnik za plaćanje.
+
+Tebi (Adminu):
+
+Obavijest da je klijent predao zadaću.
+
+Obavijest da klijent kasni s predajom.
+
+b) Klijentski Portal (Dashboard)
+Umjesto samo popisa, stranica za klijenta može biti pravi mali portal koji na jednom mjestu prikazuje:
+
+Idući susret: Datum i vrijeme.
+
+Aktivna zadaća: Što treba napraviti i do kada (s velikim gumbom "Predaj zadaću").
+
+Status plaćanja: Pregled svih uplata i otvorenih stavki.
+
+Povijest: Arhiva svih prošlih susreta, zadaća i dokumenata.
+
+c) Admin Dashboard
+I tebi bi dobro došao centralni pregled svih klijenata gdje odmah vidiš:
+
+Tko kasni sa zadaćom.
+
+Tko kasni s plaćanjem.
+
+Nadolazeće susrete za ovaj tjedan.
+
+Zadaće koje čekaju na tvoj pregled.
+
+3. Tehnički Prijedlozi
+Prikaz na stranicama: Koristi shortcodes kako bi jednostavno prikazao podatke na klijentskim stranicama (npr. [moj_portal], [moje_zadace]).
+
+Sigurnost: Upload dokumenata mora biti siguran i dostupan samo tebi i tom klijentu.
+
+Pseudonim: Odlična ideja! To se može lako dodati kao dodatno polje (usermeta) na profil svakog korisnika.
+
+Zaključak
+Tvoj plan je temelj svega. Ove točke ga samo dodatno strukturiraju na "WordPress način" i dodaju automatizaciju koja će ti dugoročno donijeti mir i red. Krenuo si u odličnom smjeru!
